@@ -12,7 +12,7 @@ class MezclaNatural{
 		Integer[] arr1 = new Integer[0];
 
 		try {// se lee el achivo
-			frA1 = new FileReader(archivo1);
+			frA1 = new FileReader(archivo1MN.txt);
 			brA1 = new BufferedReader(frA1);
 			String lineaArchivo1;
 
@@ -27,7 +27,15 @@ class MezclaNatural{
 			}catch (IOException e) {
 				e.printStackTrace();
 			}
+		}catch (FileNotFoundException e) {
+			System.out.println("Error al abrir el archivo");
+			e.printStackTrace();
+		}try {
+			frA1.close();
+		}catch (IOException e) {
+			System.out.println("Error al cerrar el archivo");
 		}
+		return arr1;
 	}
 }
 
