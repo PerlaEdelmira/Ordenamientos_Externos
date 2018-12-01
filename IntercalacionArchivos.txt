@@ -1,0 +1,15 @@
+public class PruebaIntercalacionDeArcivos {
+	public static void main(String[] args) {
+		File archivo1 = new File("./src/Archivo1.txt"); //Archivo a leer
+		File archivo2 = new File("./src/Archivo2.txt"); //Archivo a leer
+		
+		FileReader frA1 = null;
+		BufferedReader brA1;
+		FileReader frA2 = null;
+		BufferedReader brA2;
+		
+		FileWriter archivo3 = null;
+		PrintWriter pr = null;
+
+	}
+}
