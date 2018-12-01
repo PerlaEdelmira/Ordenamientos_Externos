@@ -76,8 +76,18 @@ public class PruebaIntercalacionDeArcivos {
 						repetir = false;
 					}
 				}while(repetir);
-				}
+			}catch(FileNotFoundException e) {
+			System.out.println("Error al Abrir el Archivo");
+			//e.printStackTrace();
+		}catch (IOException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				frA2.close();
+			}catch (IOException e) {
+				System.out.println("Error al Cerrar el Archivo");
 			}
+		}//Final del Archivo2
 		}
 
 	}
