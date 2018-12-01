@@ -10,6 +10,11 @@ public class PruebaIntercalacionDeArcivos {
 		
 		FileWriter archivo3 = null;
 		PrintWriter pr = null;
+		
+		try {//Aperture del archivo de salida para escritura
+			archivo3 = new FileWriter("./src/ArchivoSalida.tx", false);
+			pr = new PrintWriter(archivo3);
+		}
 
 	}
 }
