@@ -77,3 +77,24 @@ def merge(L,R):
     if j<len(R):
         answer.extend(R[j:])
     return answer
+
+
+lst = []
+# opens and reads 'Random.txt'
+with open("Random.txt", "r") as f:
+    for line in f:
+        lst.append(int(line.strip()))
+
+start_time = time.time()
+lst = merge_sort(lst)
+end_time = time.time()
+
+
+# opens and writes to file 'mergeSortResult.txt'
+file = open("mergeSortResult","w")
+for x in lst:
+    file.write(str(x)+"\n")
+# closes 'mergeSortResult.txt'
+file.close()
+print('Sorted Merge Sort List: ', lst)
+print('Elapsed time for Merge Sort: {:.20f} seconds'.format(end_time-start_time))
