@@ -46,3 +46,14 @@ file.close()
 print('Sorted Selection Sort List: ', lst)
 print('Elapsed time for Selection Sort: {:.20f} seconds'.format(end_time-start_time))
 
+def merge_sort(A):
+    """
+    Sort list A into order, and return result.
+    """
+    n = len(A)
+    if n==1:
+        return A
+    mid = n//2   # floor division
+    L = merge_sort(A[:mid])
+    R = merge_sort(A[mid:])
+    return merge(L,R)
