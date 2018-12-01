@@ -19,6 +19,16 @@ public class PruebaIntercalacionDeArcivos {
 				frA1 = new FileReader(archivo1);
 				brA1 = new BufferedReader(frA1);
 				String lineaArchivo1;
+
+				try {//Apertura del archivo2 para lectura
+					frA2 = new FileReader(archivo2);
+					brA2 = new BufferedReader(frA2);
+					String lineaArchivo2;
+					boolean repetir = true;
+					
+					lineaArchivo1 = brA1.readLine();
+					lineaArchivo2 = brA2.readLine();
+				}
 			}
 		}
 
