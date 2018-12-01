@@ -28,6 +28,54 @@ public class PruebaIntercalacionDeArcivos {
 					
 					lineaArchivo1 = brA1.readLine();
 					lineaArchivo2 = brA2.readLine();
+
+					do {// Se realizan las comparaciones mientras la bandera no cambie
+						if(Integer.parseInt(lineaArchivo1)< Integer.parseInt(lineaArchivo2)) {
+							pr.println(lineaArchivo1);
+							while((lineaArchivo2 = brA2.readLine())!= null) {
+								pr.println(lineaArchivo2);
+							}
+							repetir = false;
+						}
+					else if(Integer.parseInt(lineaArchivo1)> Integer.parseInt(lineaArchivo2)) {
+						pr.println(lineaArchivo1);
+						if((lineaArchivo1 = brA1.readLine()) == null) {
+							pr.println(lineaArchivo2);
+							while((lineaArchivo2 = brA2.readLine()) != null) {
+								pr.println(lineaArchivo2);
+							}
+							repetir = false;
+						}
+					}
+					else if(Integer.parseInt(lineaArchivo1)> Integer.parseInt(lineaArchivo2)) {
+						pr.println(lineaArchivo2);
+						if((lineaArchivo2 = brA2.readLine()) == null) {
+							pr.println(lineaArchivo1);
+							while((lineaArchivo1 = brA1.readLine()) != null) {
+								pr.println(lineaArchivo1);
+							}
+							repetir = false;
+						}
+					}
+					else {
+						pr.println(lineaArchivo1);
+						pr.println(lineaArchivo2);
+						if((lineaArchivo1 = brA1.readLine()) == null) {
+							pr.println(lineaArchivo2);
+							while((lineaArchivo2 = brA2.readLine()) != null) {
+								pr.println(lineaArchivo2);
+							}
+							repetir = false;
+						}
+					}
+					if((lineaArchivo2 = brA2.readLine()) == null) {
+						pr.println(lineaArchivo1);
+						while((lineaArchivo1 = brA1.readLine()) != null) {
+							pr.println(lineaArchivo1);
+						}
+						repetir = false;
+					}
+				}while(repetir);
 				}
 			}
 		}
