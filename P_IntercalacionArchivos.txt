@@ -1,0 +1,11 @@
+'''
+Created on Nov 30, 2018
+@author: ztudent 17
+'''
+archivo3=open ("ArchivoSalida.txt", "w")
+archivo1=open("Archivo1P.txt", "r")
+archivo2=open("Archivo2P.txt", "r")
+repetir=True
+  
+lineaArchivo1=archivo1.readline() 
+lineaArchivo2=archivo2.readline()
