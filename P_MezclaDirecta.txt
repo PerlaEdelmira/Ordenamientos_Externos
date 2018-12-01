@@ -20,3 +20,29 @@ def swap(a, i, j):
     (a[i], a[j]) = (a[j], a[i])
 
 
+def selectionSort(a):
+    n = len(a)
+    for startIndex in range(n):
+        minIndex = startIndex
+        for ind in range(startIndex+1, n):
+            if a[ind] < a[minIndex]:
+                minIndex = ind
+        swap(a, startIndex, minIndex)
+
+lst = []
+with open("Random.txt", "r") as f:
+    for line in f:
+        lst.append(int(line.strip()))
+
+start_time = time.time()
+selectionSort(lst)
+end_time = time.time()
+
+
+file = open("selectionSortResult","w")
+for x in lst:
+    file.write(str(x)+"\n")
+file.close()
+print('Sorted Selection Sort List: ', lst)
+print('Elapsed time for Selection Sort: {:.20f} seconds'.format(end_time-start_time))
+
