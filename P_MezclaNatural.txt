@@ -26,3 +26,9 @@ def mezclaNatural(arr):
             arr[k] = aux2[j] 
             j+=1
             k+=1
+
+
+def mostrar(arr): 
+    for i in range(len(arr)):         
+        print(arr[i],end=" ") 
+    print() 
