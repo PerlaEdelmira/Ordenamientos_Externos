@@ -14,6 +14,12 @@ public class PruebaIntercalacionDeArcivos {
 		try {//Aperture del archivo de salida para escritura
 			archivo3 = new FileWriter("./src/ArchivoSalida.tx", false);
 			pr = new PrintWriter(archivo3);
+		
+			try {//Apertura del archivo1 para lectura
+				frA1 = new FileReader(archivo1);
+				brA1 = new BufferedReader(frA1);
+				String lineaArchivo1;
+			}
 		}
 
 	}
