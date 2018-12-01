@@ -112,5 +112,10 @@ private static Comparable[]aux;
 
 public class PruebaMezclaNatural {
 	public static void main(String[] args) {
+	
+	MezclaNatural mn = new MezclaNatural();
+	mn.mostrar(mn.lectura());
+	System.out.println("");
+	mn.ordenamientoMezclaNatural(mn.lectura());
 	}
 }
