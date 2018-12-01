@@ -1,0 +1,28 @@
+def mezclaNatural(arr): 
+    if len(arr) >1: 
+        mitad = len(arr)//2 
+        aux1 = arr[:mitad]   
+        aux2 = arr[mitad:] 
+        mezclaNatural(aux1) 
+        mezclaNatural(aux2)  
+  
+        i = j = k = 0
+
+        while i < len(aux1) and j < len(aux2): 
+            if aux1[i] < aux2[j]: 
+                arr[k] = aux1[i] 
+                i+=1
+            else: 
+                arr[k] = aux2[j] 
+                j+=1
+            k+=1
+          
+        while i < len(aux1): 
+            arr[k] = aux1[i] 
+            i+=1
+            k+=1
+          
+        while j < len(aux2): 
+            arr[k] = aux2[j] 
+            j+=1
+            k+=1
