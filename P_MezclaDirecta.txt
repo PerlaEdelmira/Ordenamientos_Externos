@@ -1,0 +1,22 @@
+import time
+import random
+
+randfile = open("Random.txt", "w")
+
+start = int(input('Enter lower limit of random numbers: '))
+end = int(input('Enter upper limit of random numbers: '))
+
+for i in range(int(input('How many to generate?: '))):
+    line = str(random.randint(start, end))
+    randfile.write(line + '\n')
+    print(line)
+
+randfile.close()
+
+
+# example of selection sort algorithm : needs modification
+
+def swap(a, i, j):
+    (a[i], a[j]) = (a[j], a[i])
+
+
