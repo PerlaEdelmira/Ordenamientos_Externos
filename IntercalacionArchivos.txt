@@ -88,7 +88,19 @@ public class PruebaIntercalacionDeArcivos {
 				System.out.println("Error al Cerrar el Archivo");
 			}
 		}//Final del Archivo2
+	}catch (FileNotFoundException e) {
+		System.out.println("Error al Abrir el Archivo");
+		//e.printStackTrace();
+	}catch (IOException e) {
+		e.printStackTrace();
+	}finally {
+		try {
+			frA1.close();
+		}catch (IOException e) {
+			System.out.println("Error al Cerrar el Archivo");
 		}
+	}//final del Archivo1
+			System.out.println("Archivos Combinados y Ordenados Correctamente");
 
 	}
 }
