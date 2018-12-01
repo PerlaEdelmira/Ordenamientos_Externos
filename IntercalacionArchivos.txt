@@ -101,6 +101,14 @@ public class PruebaIntercalacionDeArcivos {
 		}
 	}//final del Archivo1
 			System.out.println("Archivos Combinados y Ordenados Correctamente");
-
+	}catch (IOException e) {
+			System.out.println("Error al Abrir o Cerra el Archivo");
+		}finally {
+			try {
+				archivo3.close();
+			}catch(IOException e) {
+				System.out.println("Error al cerrar el Archivo");
+			}
+		}//final del archivo3
 	}
 }
