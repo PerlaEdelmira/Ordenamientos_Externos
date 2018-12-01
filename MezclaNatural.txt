@@ -6,10 +6,16 @@ import java.io.IOException;
 
 class MezclaNatural{
 	public static Integer[]lectura(){
-		File archivo1 = new File("./src/Archivo1.txt");
+		File archivo1 = new File("./src/Archivo1MN.txt");
 		FileReader frA1 = null;
 		BufferedReader brA1;
 		Integer[] arr1 = new Integer[0];
+
+		try {// se lee el achivo
+			frA1 = new FileReader(archivo1);
+			brA1 = new BufferedReader(frA1);
+			String lineaArchivo1;
+		}
 	}
 }
 
