@@ -43,6 +43,14 @@ private static Comparable[]aux;
 		ordenamientoMezclaNatural(a, 0, a.length-1);
 		mostrar(a);
 	}
+	public static boolean estaOrdenado(Comparable[] a) {//Para ver si el arreglo ya esta ordenado
+		for(int i=1; i<a.length; i+= 1) {
+			if (a[i-1].compareTo(a[i]) > 0) {
+				return false;
+			}
+		}
+		return true;
+	}
 }
 
 public class PruebaMezclaNatural {
