@@ -54,3 +54,8 @@ while(repetir):
                 archivo3.write(lineaArchivo1)
                 lineaArchivo1=archivo1.readline()
             repetir=False
+
+archivo2.close
+archivo1.close
+print("Archivos combinados y ordenados correctamente")
+archivo3.close
